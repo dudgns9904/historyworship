@@ -1,0 +1,356 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 헤더 고정 */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  z-index: 1000;
+}
+
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a {
+  color: white;
+  margin: 0 100px;
+  text-decoration: none;
+}
+
+/* 공통 Hero 스타일 */
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* ⭐ 패럴랙스 효과 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+/* 각각 다른 배경 */
+.hero1 {
+  background-image: url('worship.png');
+}
+
+.hero2 {
+  background-image: url('mic.jpg');
+}
+
+/* 어둡게 덮기 */
+.overlay {
+  background: rgba(0,0,0,0.4);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/* 텍스트 섹션 */
+.content {
+  padding: 120px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.sub-hero {
+  margin-top: 100px; /* 고정 헤더 공간 확보 */
+  height: 40vh;
+  background-image: url('worship.png'); /* 직접 넣을 이미지 */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.sub-hero h2 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.sub-hero p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* 콘텐츠 영역 */
+.content {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.content h3 {
+  margin-top: 40px;
+}
+
+/* 문의 폼 */
+.contact-form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #2a2a72;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #1d1d50;
+}
+
+.contact-hero {
+  background-image: url('worship.png'); /* 원하는 이미지 파일 */
+}
+
+/* select 박스 스타일 */
+.contact-form select {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.team-hero {
+  background-image: url('worship.png'); /* 원하는 이미지 */
+}
+
+/* 전체 팀 영역 */
+.team-section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* 카테고리 한 줄씩 */
+.team-category {
+  margin-bottom: 70px;
+}
+
+.team-category h3 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  border-bottom: 2px solid #2a2a72;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* 한 줄 배치 */
+.team-row {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* 멤버 카드 */
+.member {
+  text-align: center;
+  width: 180px;
+}
+
+/* 사진 자리 */
+.member .photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* 이름 */
+.member h4 {
+  margin: 5px 0;
+}
+
+.gallery-hero {
+  background-image: url('worship.png');
+}
+
+/* 갤러리 영역 */
+.gallery-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ⭐ 핵심: Grid로 3~4장 정렬 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* 갤러리 카드 */
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.gallery-item p {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+  /* 헤더 */
+  header h1 {
+    font-size: 28px; /* 제목 조금 줄임 */
+  }
+
+  .hero {
+    height: auto; /* 화면 높이에 맞춤 */
+    background-size: contain; /* 전체 이미지 보이도록 */
+    background-position: center top; /* 중요한 부분 위쪽 기준 */
+    background-attachment: scroll; /* 패럴랙스 해제 */
+  }
+
+  nav a {
+    margin: 0 20px; /* 메뉴 간격 줄임 */
+    font-size: 16px; /* 메뉴 글씨 확대 */
+    padding: 6px 8px;
+  }
+
+  /* 콘텐츠 여백 조정 */
+  .content, .gallery-section, .team-section {
+    padding: 60px 20px; /* 여백 줄이고 시원시원하게 */
+  }
+
+  /* 팀 섹션 */
+  .team-row {
+    flex-direction: column; /* 한 줄씩 쌓기 */
+    gap: 25px; /* 간격 조금 늘림 */
+    align-items: center; /* 가운데 정렬 */
+  }
+
+  .member {
+    width: 160px; /* 모바일용 크기 */
+  }
+
+  .member .photo {
+    width: 160px;
+    height: 160px;
+  }
+
+  /* 갤러리 */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2장씩 표시 */
+    gap: 20px;
+  }
+
+  .gallery-item img {
+    height: 200px; /* 이미지 높이 */
+  }
+
+  /* 콘텐츠 글씨 */
+  .content h2 {
+    font-size: 26px;
+  }
+
+  .content p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+/* 작은 모바일 대응 (480px 이하) */
+@media (max-width: 480px) {
+  /* 갤러리 한 장씩 */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  
+  .hero {
+    height: auto; /* 화면 높이에 맞춤 */
+    background-size: contain; /* 전체 이미지 보이도록 */
+    background-position: center top; /* 중요한 부분 위쪽 기준 */
+    background-attachment: scroll; /* 패럴랙스 해제 */
+  }
+
+  /* 팀 섹션 */
+  .team-row {
+    flex-direction: column;
+  }
+
+  /* 헤더 */
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  /* 팀 멤버 크기 조정 */
+  .member {
+    width: 140px;
+  }
+
+  .member .photo {
+    width: 140px;
+    height: 140px;
+  }
+
+  /* 콘텐츠 글씨 */
+  .content h2 {
+    font-size: 22px;
+  }
+
+  .content p {
+    font-size: 15px;
+  }
+
+  /* 갤러리 이미지 */
+  .gallery-item img {
+    height: 180px;
+  }
+}
